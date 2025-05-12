@@ -8,18 +8,18 @@ var started = false;//7.1
 var level = 0;//7.2
 //7.1
 $(document).keydown(function(){
-  startGame();
+  if(!started){
+  $("#level-title").text("Level "+level);//7.3
+  nextSequence();
+  started = true;
 });
 $(document).click(function(){
-  startGame();
-});
-function startGame(){
   if(!started){
-    $("#level-title").text("Level "+level);//7.3
-    nextSequence();
-    started = true;
-  }
-}
+  $("#level-title").text("Level "+level);//7.3
+  nextSequence();
+  started = true;
+});
+
 
 //4.1
 $(".btn").click(function(){
