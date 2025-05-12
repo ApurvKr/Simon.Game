@@ -47,8 +47,10 @@ function checkAnswer(currentLevel) {
       playSound("wrong"); //9.1
       $("body").addClass("game-over");  //9.2
 
+      var score = level-1;
+      
       $("#level-title").text("Game Over, Press Any Key to Restart");  //9.3
-      $("#score-title").text("Score: " + (userClickedPattern.length-1));
+      $("#score-title").text("Score: " + score);
 
       setTimeout(function(){
         $("body").removeClass("game-over");
