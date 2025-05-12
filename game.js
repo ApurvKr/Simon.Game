@@ -13,13 +13,6 @@ $(document).keydown(function(){
   nextSequence();
   started = true;
 });
-$(document).click(function(){
-  if(!started){
-  $("#level-title").text("Level "+level);//7.3
-  nextSequence();
-  started = true;
-});
-
 
 //4.1
 $(".btn").click(function(){
